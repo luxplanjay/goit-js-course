@@ -1,1 +1,1 @@
-Gulp Project Template with basic setup and project structure
+First version of js-app, just a basic Object usage methods

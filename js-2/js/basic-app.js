@@ -1,9 +1,8 @@
-(function () {
+(function() {
   'use strict';
 
   var app = {
-    users: [
-      {
+    users: [{
         private: {
           login: 'mangozedog',
           mail: 'mango@mail.dev',
@@ -41,7 +40,7 @@
       }
     ],
     // $getUserData
-    getUserData: function (login) {
+    getUserData: function(login) {
       for (var i = 0, length = this.users.length; i < length; i++) {
         if (this.users[i].private.login === login) {
           return this.users[i].public;
@@ -50,7 +49,7 @@
       return null;
     },
     // $createUserProfile
-    createUserProfile: function (data) {
+    createUserProfile: function(data) {
       var profileContainer = createProfileContainer(),
         userCard = createUserCard(data),
         posts = createPosts(data),
@@ -97,7 +96,7 @@
 
         // content header
         contentHeader.classList.add('user-card__name');
-        contentHeader.appendChild (document.createTextNode(data.name));
+        contentHeader.appendChild(document.createTextNode(data.name));
 
         // content meta data
         meta.classList.add('user-card__meta');
@@ -178,7 +177,7 @@
       }
     },
     // $showUserProfile
-    showUserProfile: function (login) {
+    showUserProfile: function(login) {
       var userData = this.getUserData(login);
 
       if (userData) {
@@ -189,7 +188,7 @@
       }
     },
     // $createControls
-    createControls: function () {
+    createControls: function() {
       var container = document.createElement('div'),
         select = document.createElement('select'),
         btn = document.createElement('button');
@@ -207,7 +206,7 @@
       btn.classList.add('app-ctrls__btn');
       btn.appendChild(document.createTextNode('Show profile'));
 
-      btn.onclick = function () {
+      btn.onclick = function() {
         // console.log('this: ', this);
 
         var select = document.querySelector('.app-ctrls__select'),
@@ -230,7 +229,7 @@
       return container;
     },
     // $init
-    init: function () {
+    init: function() {
       var container = document.querySelector('#root');
 
       container.appendChild(this.createControls());

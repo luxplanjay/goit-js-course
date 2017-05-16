@@ -17,7 +17,9 @@ body {
   border-radius: 0.125rem;
 }
 
+
 /* $app-ctrls */
+
 .app-ctrls {
   display: inline-flex;
   margin-bottom: 1rem;
@@ -44,7 +46,9 @@ body {
   background-color: #E88D67;
 }
 
+
 /* $user-profile */
+
 .user-profile {
   display: flex;
   flex-flow: row wrap;
@@ -54,7 +58,9 @@ body {
   padding: 0.5rem;
 }
 
+
 /* $user-card */
+
 .user-card {
   width: 26%;
 }
@@ -112,7 +118,9 @@ body {
   margin-right: 0.5rem;
 }
 
+
 /* $posts */
+
 .posts {
   width: 72%;
   padding: 0.5rem;

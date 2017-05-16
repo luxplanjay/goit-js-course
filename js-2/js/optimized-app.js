@@ -1,12 +1,11 @@
 /**
  * Created by Zerk on 16-May-17.
  */
-(function () {
+(function() {
   'use strict';
 
   var app = {
-    users: [
-      {
+    users: [{
         private: {
           login: 'mangozedog',
           mail: 'mango@mail.dev',
@@ -44,7 +43,7 @@
       }
     ],
     // $getUserData
-    getUserData: function (login) {
+    getUserData: function(login) {
       for (var i = 0, length = this.users.length; i < length; i++) {
         if (this.users[i].private.login === login) {
           return this.users[i].public;
@@ -53,7 +52,7 @@
       return null;
     },
     // $createUserProfile
-    createUserProfile: function (data) {
+    createUserProfile: function(data) {
       var profileContainer = createProfileContainer(this),
         userCard = createUserCard(data, this),
         posts = createPosts(data, this),
@@ -65,21 +64,29 @@
 
       // $createProfileContainer
       function createProfileContainer(context) {
-        //this = undefined
         return context.createNode('div', 'user-profile', null, null);
       }
 
       // $createUserCard
       function createUserCard(data, context) {
         var container = context.createNode('div', 'user-card', null, null),
-          img = context.createNode('img', 'user-card__img', [{name: 'src', value: data.profilePic}, {name: 'alt', value: 'picture of ' + data.name}], null),
+          img = context.createNode('img', 'user-card__img', [{
+            name: 'src',
+            value: data.profilePic
+          }, {
+            name: 'alt',
+            value: 'picture of ' + data.name
+          }], null),
           content = context.createNode('div', 'user-card__content', null, null),
           contentHeader = context.createNode('h2', 'user-card__name', null, data.name),
           meta = context.createNode('div', 'user-card__meta', null, null),
           metaDate = context.createNode('p', 'user-card__date', null, 'Joined: ' + data.joinDate),
           metaLoc = context.createNode('p', 'user-card__loc', null, 'Location: ' + data.location),
           descr = context.createNode('p', 'user-card__descr', null, data.about),
-          friends = context.createNode('a', 'user-card__friends', [{name: 'href', value: '#'}], null),
+          friends = context.createNode('a', 'user-card__friends', [{
+            name: 'href',
+            value: '#'
+          }], null),
           friendsIcon = context.createNode('i', 'user-card__icon', null, null);
 
         meta.append(metaDate, metaLoc);
@@ -125,7 +132,7 @@
       }
     },
     // $showUserProfile
-    showUserProfile: function (login) {
+    showUserProfile: function(login) {
       var userData = this.getUserData(login);
 
       if (userData) {
@@ -136,7 +143,7 @@
       }
     },
     // $createControls
-    createControls: function () {
+    createControls: function() {
       var container = this.createNode('div', 'app-ctrls', null, null),
         select = this.createNode('select', 'app-ctrls__select', null, null),
         btn = this.createNode('button', 'app-ctrls__btn', null, 'Show profile');
@@ -148,7 +155,7 @@
       }
 
       // при клике на кнопку выбирается текущая опция в селекте и передается в showUserProfile
-      btn.onclick = function () {
+      btn.onclick = function() {
         // console.log('this: ', this);
 
         var select = document.querySelector('.app-ctrls__select'),
@@ -168,7 +175,7 @@
       return container;
     },
     // $createNode
-    createNode: function (type, cls, attributes, textNode) {
+    createNode: function(type, cls, attributes, textNode) {
       var el = document.createElement(type);
 
       if (cls && (typeof cls === 'string')) {
@@ -188,7 +195,7 @@
       return el;
     },
     // $init
-    init: function () {
+    init: function() {
       var container = document.querySelector('#root');
 
       container.appendChild(this.createControls());
