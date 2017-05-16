@@ -1,0 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  color: #1B1B1E;
+}
+
+.app-ctrls, .user-profile, .user-card, .posts, .posts__item, .gallery, .gallery__item {
+  border: 1px solid rgba(34, 36, 38, .15);
+  box-shadow: 0 2px 4px 0 rgba(34, 36, 38, .12), 0 2px 10px 0 rgba(34, 36, 38, .15);
+  border-radius: 0.125rem;
+}
+
+/* $app-ctrls */
+.app-ctrls {
+  display: inline-flex;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+.app-ctrls__select {
+  padding: 0.5rem;
+  font-size: inherit;
+}
+
+.app-ctrls__btn {
+  padding: 0.75rem 1rem;
+  font-size: inherit;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background-color: #0E79B2;
+  color: #FBFEF9;
+}
+
+.app-ctrls__btn:hover {
+  background-color: #E88D67;
+}
+
+/* $user-profile */
+.user-profile {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 60rem;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+/* $user-card */
+.user-card {
+  width: 26%;
+}
+
+.user-card__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.user-card__content {
+  padding: 0.5rem;
+}
+
+.user-card__name {
+  font-size: 1.5rem;
+}
+
+.user-card__meta {
+  margin-top: 1rem;
+  color: #979798;
+}
+
+.user-card__date, .user-card__loc {
+  margin-bottom: 0.5rem;
+}
+
+.user-card__descr {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.3;
+  word-break: break-all;
+}
+
+.user-card__friends {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: inherit;
+  border-top: 1px solid #ccc;
+}
+
+.user-card__friends:hover {
+  text-decoration: underline;
+}
+
+.user-card__icon {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url('../img/friends.png');
+  background-size: cover;
+  margin-right: 0.5rem;
+}
+
+/* $posts */
+.posts {
+  width: 72%;
+  padding: 0.5rem;
+}
+
+.posts__header {
+  font-size: 1.5rem;
+}
+
+.posts__item {
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.gallery__item {
+  display: block;
+  width: 32%;
+  height: auto;
+  max-width: 25rem;
+  max-height: 12.5rem;
+  margin-bottom: 0.5rem;
+  margin-right: 2%;
+  object-fit: cover;
+}
+
+.gallery__item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.gallery__item:nth-last-child(-n+3) {
+  margin-bottom: 0;
+}
