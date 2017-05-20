@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  color: #1B1B1E;
+}
+
+input {
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  outline: 0;
+}
+
+.app-container, .controls, .user-card {
+  border: 1px solid rgba(34, 36, 38, .15);
+  box-shadow: 0 2px 4px 0 rgba(34, 36, 38, .12), 0 2px 10px 0 rgba(34, 36, 38, .15);
+  border-radius: 0.125rem;
+}
+
+
+/* $app-container */
+
+.app-container {
+  width: 60rem;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+
+/* $controls */
+
+.controls {
+  outline: 1px solid #ccc;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  width: 30rem;
+  padding: 0.5rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.controls input {
+  flex-grow: 1;
+  flex: 0 1 70%;
+}
+
+button {
+  flex-shrink: 0;
+  padding: 0.5rem;
+  outline: 0;
+  border: 0;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #0E79B2;
+  color: #FBFEF9;
+}
+
+button:hover {
+  background-color: #E88D67;
+}
+
+
+/* $cards-container */
+
+.cards-container {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0.5rem;
+}
+
+
+/* $user-card */
+
+.user-card {
+  outline: 1px solid #ccc;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 32%;
+  margin-right: 2%;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+}
+
+.user-card:nth-child(3n) {
+  margin-right: 0;
+}
+
+.user-card h2 {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.user-card p {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.user-card input {
+  margin-bottom: 0.5rem;
+}

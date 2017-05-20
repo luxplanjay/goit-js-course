@@ -1,1 +1,1 @@
-# goit-js-app
+# goit-js-course
