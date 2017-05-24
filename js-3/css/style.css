@@ -1,7 +1,6 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -37,7 +36,7 @@ input {
 .controls {
   outline: 1px solid #ccc;
   display: -webkit-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   width: 30rem;
   padding: 0.5rem;
@@ -71,7 +70,7 @@ button:hover {
 
 .cards-container {
   display: -webkit-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   flex-flow: row wrap;
   padding: 0.5rem;
@@ -83,7 +82,7 @@ button:hover {
 .user-card {
   outline: 1px solid #ccc;
   display: -webkit-flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;

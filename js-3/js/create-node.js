@@ -1,7 +1,3 @@
-/**
- * Created by Zerk on 16-May-17.
- */
-
 function createNode(type, cls, attributes, str) {
   'use strict';
 
@@ -12,8 +8,10 @@ function createNode(type, cls, attributes, str) {
   }
 
   if (attributes && (typeof attributes === 'object')) {
-    for (var i = 0; i < attributes.length; i++) {
-      el.setAttribute(attributes[i].name, attributes[i].value);
+    for (var key in attributes) {
+      if (attributes.hasOwnProperty(key)) {
+          el.setAttribute(key, attributes[key]);
+      }
     }
   }
 
