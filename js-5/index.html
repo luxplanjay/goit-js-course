@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="img/favicon.png?" type="image/png">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>js-5</title>
+</head>
+
+<body class="page">
+  <!-- <div id="jquery-expl">
+    <nav>
+      <a href="#id-1" class="link">item 1</a>
+      <a href="#id-2" class="link">item 2</a>
+      <a href="#id-3" class="link">item 3</a>
+    </nav>
+
+    <div class="gallery">
+      <img src="http://lorempixel.com/400/200/city" alt="" id="id-1">
+      <img src="http://lorempixel.com/400/200/sports" alt="" id="id-2">
+      <img src="http://lorempixel.com/400/200/people" alt="" id="id-3">
+    </div>
+  </div> -->
+
+  <div id="container"></div>
+
+  <!-- Lodash templates -->
+  <script type="text/template" id="menu">
+    <div class="menu">
+      <h2 class="title"><%- title %></h2>
+      <ul class="list">
+        <% _.forEach(items, function(item) { %>
+          <li class="list-item">
+            <%- item %>
+          </li>
+          <% }); %>
+      </ul>
+    </div>
+  </script>
+
+  <script type="text/template" id="article-tpl-1">
+    <article class="article">
+      <h2 class="article-title"><%- title %></h2>
+      <p class="article-text">
+        <%- text %>
+      </p>
+      <a href="<%- link %>" class="article-link">read more...</a>
+      <div class="article-info">
+        <a href="/aticles/all/<%- type %>" class="article-type">
+          <%- type %>
+        </a>
+        <p class="article-date">
+          <%- date %>
+        </p>
+      </div>
+    </article>
+  </script>
+
+  <script type="text/template" id="article-tpl-2">
+    <% for(var i = 0; i < data.length; i++) { %>
+      <article class="article">
+        <h2 class="article-title"><%= data[i].title %></h2>
+        <p class="article-text">
+          <%= data[i].text %>
+        </p>
+        <a href="#" class="article-link">read more...</a>
+        <div class="article-info">
+          <a href="/aticles/all/<%= data[i].type %>" class="article-type">
+            <%= data[i].type %>
+          </a>
+          <p class="article-date">
+            <%= data[i].date %>
+          </p>
+        </div>
+      </article>
+      <% } %>
+  </script>
+
+  <script type="text/template" id="article-tpl-3">
+    <% _.forEach(data, function (item) { %>
+      <article class="article">
+        <h2 class="article-title"><%= item.title %></h2>
+        <p class="article-text">
+          <%= item.text %>
+        </p>
+        <a href="#" class="article-link">read more...</a>
+        <div class="article-info">
+          <a href="/aticles/all/<%= item.type %>" class="article-type">
+            <%= item.type %>
+          </a>
+          <p class="article-date">
+            <%= item.date %>
+          </p>
+        </div>
+      </article>
+      <% }); %>
+  </script>
+
+  <!-- Handlebars template -->
+  <script type="text/template" id="menu-hbs">
+    <div class="menu">
+      <h2 class="title">{{title}}</h2>
+      <ul class="list">
+        {{#each items}}
+        <li class="list-item">{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </script>
+
+  <script type="text/template" id="article-tpl-hbs">
+    {{#each this}}
+    <article class="article">
+      <h2 class="article-title">{{title}}</h2>
+      <p class="article-text">{{text}}</p>
+      <a href="#" class="article-link">read more...</a>
+      <div class="article-info">
+        <a href="/aticles/all/{{type}}" class="article-type">
+          {{type}}
+        </a>
+        <p class="article-date">
+          {{date}}
+        </p>
+      </div>
+    </article>
+    {{/each}}
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+  <script src="js/handlebars-v4.0.10.js"></script>
+  <!-- <script src="js/jquery-in-2017-lmao.js"></script> -->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
