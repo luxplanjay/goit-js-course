@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="favicon.png?" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <title>js-7-ajax</title>
+</head>
+
+<body class="page">
+  <div id="root"></div>
+
+  <script type="tpl/lodash" id="article">
+    <article class="article">
+      <img src="<%- img %>" alt="" />
+      <h2><%- title %></h2>
+      <p><%- text %></p>
+      <a href="<%- url %>" target="_blank">read more...</a>
+    </article>
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/lodash.min.js"></script>
+  <script src="js/promise-basic.js"></script>
+  <script src="js/promise-http-req.js"></script>
+  <script src="js/fetch.js"></script>
+  <script src="js/proto.js"></script>
+  <script src="http://localhost:35729/livereload.js"></script>
+</body>
+
+</html>
