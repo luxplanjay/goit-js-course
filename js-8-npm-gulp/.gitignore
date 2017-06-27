@@ -36,3 +36,9 @@ Ankh.NoLoad
 
 #Node
 node_modules/
+
+#Various images
+/*.png
+/*.jpg
+/*.jpeg
+*.psd

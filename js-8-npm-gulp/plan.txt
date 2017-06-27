@@ -1,0 +1,26 @@
+- что такое  NPM
+
+dev vs save-dev
+
+install	i
+uninstall	r
+config	c
+update	up
+list	ls
+--save	-S
+--save-dev	-D
+
+# инфа о авторе по умолчанию
+npm set init.author.name "$NAME"
+npm set init.author.email "$EMAIL"
+npm set init.author.url "$SITE"
+
+- package.json
+- пакеты: что такое и как искать
+
+
+
+- собираем gulp
+- gulpfile.js
+
+-реюзаем сборку
