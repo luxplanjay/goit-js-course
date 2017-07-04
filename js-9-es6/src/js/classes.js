@@ -15,11 +15,12 @@
 //
 // // const animal = new Animal('Ajax', 5, 'quack');
 // // console.log(animal);
+
 // // Animal.prototype.makeSound.bind({
 // //   sound: 'qweqweqweqweqweqweqwe'
 // // })();
+
 // // console.log('LOL: ', Animal.prototype.isPrototypeOf(animal));
-// // animal.makeSound();
 //
 // // console.log(Animal.prototype);
 //

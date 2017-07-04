@@ -17,6 +17,10 @@
 //
 // document.body.append(button);
 
+// error
+// button.addEventListener('click', dog.makeSound);
+
+// error, this undefined
 // button.addEventListener('click', dog.makeSound.bind(this));
 
 // button.addEventListener('click', () => dog.makeSound());

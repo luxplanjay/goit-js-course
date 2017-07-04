@@ -39,32 +39,33 @@
 // console.log('wildDog proto: ', wildDog);
 
 // function Animal (sound) {
-// this = {}
-// this.__proto__ = Animal.prototype
+//// this = {}
+//// this.__proto__ = Animal.prototype
 // this.sound = sound;
-// return this
+//// return this
 // }
 
 // Animal.prototype.makeSound = function () {
 //   console.log(this.sound);
 // };
 
-//
-// Animal {
-//   prototype: {
-//     constructor: Animal,
-//     makeSound: func
-//   }
-// }
+// приблизительно так выглядит Animal на самом деле
+// //Animal {
+// //  prototype: {
+// //    constructor: Animal,
+//  //   makeSound: func
+//  // }
+// //}
 //
 // var dog = new Animal('woof');
 //
-// dog.__proto__ = Animal.prototype
+// //получается
+//// dog.__proto__ = Animal.prototype
 
 // console.log('dog from new Animal: ', dog);
 
 // __proto__ - прототип обьекта! Это поле в обьекте, в которое записывается
-// ссылка на поле(обьект) prototype функции-родителя!!!
+// ссылка на поле prototype функции-родителя!!!
 // __proto__ - используется в цепочке прототипов для поиска отсутствующих полей
 // __proto__ - есть у ВСЕХ обьектов в JS!!!
 // __proto__ - должно быть приватным полем, но на самом деле доступен для изменения
@@ -138,8 +139,6 @@
 //   this.name = name;
 // }
 //
-//
-//
 // Robot.prototype.kill = function () {
 //   console.log('I am ' + this.name + ' and u are ducked!');
 // };
@@ -147,6 +146,5 @@
 // console.log(Robot.prototype);
 //
 // var killerBot = new Robot('vasya');
-//
 //
 // console.log(killerBot);
