@@ -1,5 +1,5 @@
 {
-  "ecmaVersion": "5",
+  "ecmaVersion": "6",
   "libs": [
     "browser",
     "jquery"
@@ -8,7 +8,5 @@
   "dontLoad": [
     "node_modules/**"
   ],
-  "plugins": {
-    "doc_comment": true
-  }
+  "plugins": {}
 }

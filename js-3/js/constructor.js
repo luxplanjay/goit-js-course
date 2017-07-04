@@ -1,4 +1,4 @@
-//-- SIMPLE
+// -- SIMPLE
 // (function() {
 //   'use strict';
 //
@@ -16,8 +16,8 @@
 //   console.log(person1);
 //   console.log(person2);
 // })();
-
-//-- RETURN
+//
+// -- RETURN
 // (function() {
 //   'use strict';
 //
@@ -42,8 +42,8 @@
 //   };
 //   console.log(new Human('Коля', 20));
 // })();
-
-//-- METHODS
+//
+// -- METHODS
 // (function() {
 //   'use strict';
 //
@@ -62,8 +62,8 @@
 //
 //   // console.log(person);
 // })();
-
-//-- LOCAL methods and vars
+//
+// -- LOCAL methods and vars
 // (function() {
 //   'use strict';
 //
@@ -82,8 +82,8 @@
 //   var person = new Human('Singu', 20, 'male');
 //   person.getFullInfo(); // This persons info is:  Singu 20 male
 // })();
-
-//-- GAME CARDS
+//
+// -- GAME CARDS
 // (function() {
 //   'use strict';
 //

@@ -1,6 +1,28 @@
 .header {
-  background-color:  brown;
+  background-color: #fefefe;
   display: flex;
-  font-size: 40px;
+  font-size: 2rem;
   color: red;
+
+  ul {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    list-style: none;
+
+    li {
+      margin-right: 0.5rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
 }

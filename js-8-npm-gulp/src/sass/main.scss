@@ -1,0 +1,12 @@
+.articles {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0.5rem;
+
+  &__item {
+    flex: 1 0 30%;
+  }
+}
