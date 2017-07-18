@@ -5,7 +5,7 @@ class RegForm extends React.Component {
     super(props);
 
     this.state = {
-      userData: [1,2,3],
+      userData: [1, 2, 3, 4],
       data: [],
       isToggled: false
     };
@@ -36,6 +36,7 @@ class RegForm extends React.Component {
 
   componentDidMount() {
     console.log('JUST MOUNTED!');
+
     fetch('https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=5b88481e2156441382975efd19981185')
       .then(response => response.json())
       .then(apiResponse => {
